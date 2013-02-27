@@ -1,0 +1,3 @@
+[submodule "external/c_utility"]
+	path = external/c_utility
+	url = git@github.com:KAMEDAkyosuke/c_utility.git

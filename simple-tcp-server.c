@@ -31,6 +31,9 @@ tcp_server_ctx_t* tcp_server_new()
 void tcp_server_free(tcp_server_ctx_t* ctx)
 {
     socketlist_free(ctx->client_sockets);
+    if(ctx->data_destructor != NULL){
+        ctx->data_destructor(ctx->data);
+    }
     free(ctx);
 }
 

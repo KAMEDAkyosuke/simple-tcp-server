@@ -13,7 +13,8 @@ static void accept_socket(tcp_server_ctx_t* ctx);
 
 tcp_server_ctx_t* tcp_server_new()
 {
-    tcp_server_ctx_t* ctx = (tcp_server_ctx_t*) calloc(1, sizeof(tcp_server_ctx_t));
+    tcp_server_ctx_t* ctx = (tcp_server_ctx_t*) malloc(sizeof(tcp_server_ctx_t));
+    ctx->data = NULL;
     ctx->port = 0;
     ctx->backlog = 5;
 
